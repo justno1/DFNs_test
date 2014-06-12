@@ -54,7 +54,7 @@
    });
 */
 //  this.Router = new router();
-  Parse.history.start();
+//  Parse.history.start();
 
 
 })();
