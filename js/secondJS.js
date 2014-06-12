@@ -17,7 +17,7 @@ function(){
         alert("In classficationFunc");
         var News = Parse.Object.extend("data");
         var query = new Parse.Query(News);
-        query.get("QQWPw0cHPQ",{
+        query.get("5rIhoPJKu3",{
           success:function(news){
             var newsTitle = news.get("title");
             var newsPicture = news.get("picture");
@@ -31,7 +31,7 @@ function(){
           }
         });
       }
-   	}
+   	};
 
     handler.classficationFunc();
 
