@@ -16,13 +16,16 @@
 //        alert("In classficationFunc");
         var News = Parse.Object.extend("data");
         var query = new Parse.Query(News);
-        query.get("fWaOpLOASa"  ,{
+        query.find({
           success:function(news){
+            for(var i=0;i<news.length;i++)
+            {
+              var objectNews = news[i];
 
-            var newsTitle = news.get("title");
-            var newsPicture = news.get("picture");
-            var newsText = news.get("text");
-            var newsUrl = news.get("website");
+            var newsTitle = objectNews.get("title");
+            var newsPicture = objectNews.get("picture");
+            var newsText = objectNews.get("text");
+            var newsUrl = objectNews.get("website");
 
             alert(newsPicture);
             console.log(newsPicture);
@@ -41,6 +44,7 @@
                           +  newsText
                           +"</p></td></tr>";  
             $("#putNewsHere").append(putANews);
+          }
 
           },
           error:function(object,error){
