@@ -32,6 +32,8 @@
       }
    	};
 
+    handler.classficationFunc();
+
 
 
  /* router設定*/
