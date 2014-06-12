@@ -33,7 +33,6 @@ function(){
       }
    	};
 
-    handler.classficationFunc();
 
 
  /* router設定*/
@@ -59,5 +58,7 @@ function(){
   handler.navbarFunc();
 */
   Parse.history.start();
+  handler.classficationFunc();
+
 
 }
