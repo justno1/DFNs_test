@@ -23,12 +23,13 @@
             var newsPicture = news.get("picture");
             var newsText = news.get("text");
 
-            console.log();
             alert(newsPicture);
+            console.log(newsPicture);
+
 
 
             document.getElementById('putNewsHere').value = newsTitle;
-            var str="<img id=getPicUrl src="+ newsPicture +">";
+            var str="<img src="+ newsPicture +">";
             $("#putNewsHere").append(str);
 
           },
