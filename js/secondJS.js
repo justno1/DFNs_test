@@ -24,6 +24,8 @@
             var newsPicture = news.get("picture");
             var newsText = news.get("text");
 
+            console.log(newsTitle);
+
             document.getElementById('putNewsHere').innerHTML = newsTitle;
 
           },
