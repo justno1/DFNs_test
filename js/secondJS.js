@@ -24,7 +24,7 @@
             var newsText = news.get("text");
             var newsUrl = news.get("website");
 
-//            alert(newsPicture);
+            alert(newsPicture);
             console.log(newsPicture);
 
 
