@@ -40,7 +40,7 @@
 
     routes:{
 //      'index/': 'index',
-      'second/': , 'classfication',
+      'second/': 'classfication',
 //      'third/:news_id': 'news',
 //      'personalpage/': 'personalpage',
       
