@@ -31,7 +31,7 @@
 
             document.getElementById('putNewsHere').value = newsTitle;
             var str="<img src="+ newsPicture +">";
-            var putANews= "<tr class='hot'><td class='grid_4 alpha' id='picF'><img src=" 
+            var putANews= "<tr class='hot'><td class='grid_4 alpha' id='picF'><img crossorigin='Anonymous' src=" 
                           + newsPicture 
                           + "></td><td class='ab grid_8 omega'><h2><a href=" 
                           +  newsUrl 
