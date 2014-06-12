@@ -46,16 +46,15 @@
       
     },
 
-    index: handler. ,
-    classfication: handler. ,
-    news: handler.classficationFunc ,
-    personalpage: handler. ,
+ //   index: handler. ,
+    classfication: handler.classficationFunc ,
+ //   news: handler.classficationFunc ,
+ //   personalpage: handler. ,
 
    });
 
   this.Router = new router();
   Parse.history.start();
-  handler.classficationFunc();
 
 
 })();
