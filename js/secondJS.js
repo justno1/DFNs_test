@@ -3,6 +3,7 @@ function(){
 //初始化Parse();
   Parse.initialize("5M7ztCYOUkQbUkiFmww8RmM1GTKyTKl2wjMUMQla","MqZ4M3m5hrvO11SqnCT86r8buTqCjlTQhjPV10ZB");
 
+
     var handler = {
 
      /* header按鈕變更      if 已登入 > 登入鍵消失    else if 點擊登入按鈕跳出FB登入跳窗 */
@@ -32,16 +33,18 @@ function(){
       }
    	}
 
+    handler.classficationFunc();
+
 
  /* router設定*/
 
-  var router = Parse.Router.extend({
+/*  var router = Parse.Router.extend({
 
     routes:{
-//      'index/': 'index',
+      'index/': 'index',
       'second/': , 'classfication',
-//      'third/:news_id': 'news',
-//      'personalpage/': 'personalpage',
+      'third/:news_id': 'news',
+      'personalpage/': 'personalpage',
       
     },
 
@@ -53,8 +56,8 @@ function(){
    });
 
   this.Router = new router();
-//  handler.navbarFunc();
-
+  handler.navbarFunc();
+*/
   Parse.history.start();
 
 }
