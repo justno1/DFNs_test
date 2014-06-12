@@ -16,7 +16,7 @@
 //        alert("In classficationFunc");
         var News = Parse.Object.extend("data");
         var query = new Parse.Query(News);
-        query.first({
+        query.find("5rIhoPJKu3"  ,{
           success:function(news){
 
             var newsTitle = news.get("title");
@@ -24,7 +24,7 @@
             var newsText = news.get("text");
             var newsUrl = news.get("website");
 
-            alert(newsPicture);
+//            alert(newsPicture);
             console.log(newsPicture);
 
 
