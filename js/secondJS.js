@@ -18,13 +18,13 @@
         var query = new Parse.Query(News);
         query.get("5rIhoPJKu3",{
           success:function(news){
-            alert("In query successfully");
+            alert(newsTitle);
 
             var newsTitle = news.get("title");
             var newsPicture = news.get("picture");
             var newsText = news.get("text");
 
-            console.log(newsTitle);
+            console.log();
 
             document.getElementById('putNewsHere').innerHTML = newsTitle;
 
