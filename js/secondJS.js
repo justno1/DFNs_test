@@ -27,7 +27,7 @@
             var newsText = objectNews.get("text");
             var newsUrl = objectNews.get("website");
 
-            alert(newsPicture);
+ //           alert(newsPicture);
             console.log(newsPicture);
 
 
