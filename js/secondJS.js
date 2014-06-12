@@ -35,7 +35,7 @@
 
 
  /* router設定*/
-
+/*
   var router = Parse.Router.extend({
 
     routes:{
@@ -52,8 +52,8 @@
  //   personalpage: handler. ,
 
    });
-
-  this.Router = new router();
+*/
+//  this.Router = new router();
   Parse.history.start();
 
 
