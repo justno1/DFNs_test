@@ -28,6 +28,8 @@
 
 
             document.getElementById('putNewsHere').value = newsTitle;
+            var str="<img id=getPicUrl src="+ news.picture +">";
+            $("#putNewsHere").append(str);
 
           },
           error:function(object,error){
