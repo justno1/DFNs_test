@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="container_12">
+
+<head >
+
+    <meta charset="utf-8">
+    <title>新聞，聞異文</title>
+    <link rel="stylesheet" type="text/css" href=" ">
+    <link href="font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Nova+Slim' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/third.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+</head>
+    
+<body class="grid_12">
+    
+    <header  class="" height="" >    
+      <div id="top_botton"class=" " >
+        <img  src="img/logo_word.png" class="logo_word" alt="新聞聞異文">
+        <a class="top_right" id="top1" href="#"> <img  src="img/login.png"  alt="登入"></a>
+        <a class="top_right" id="2" href="personalpage.html"><img  src="img/personal.png"  alt="個人頁"> </a>
+        <a class="top_right" id="3" href="index.html"> <img  src="img/home.png"  alt="首頁"></a>
+      </div>
+    </header>
+    
+    <div id="content-wrapper" class="grid_12">
+       <div class="top-banner grid_12" height="200"></div>    
+        <p class="space"></p>
+        <div id="fair" class="fair_bar" title="公正" style="width:37%"
+           > &nbsp; </div>
+      <div id="unfair" class="fair_bar" title="偏頗" style="width:63%"
+           > &nbsp; </div>    
+        
+      <div class="news_title"><h1 id="news_title">停建核四外，我們更應該做什麼？  | 聯合新聞網</h1></div>
+ 
+      <iframe  src="http://mag.udn.com/mag/news/storypage.jsp?f_MAIN_ID=488&f_SUB_ID=5832&f_ART_ID=512831" width=920 height=500 scrolling="yes" frameborder="0"> 
+      </iframe>
+    </div>    
+    <div id="under_article"class="grid_12">
+    <div id="feel" class="grid_12">
+      <p>  </p>
+      <div class="question">看完覺得這篇新聞</div>
+         <button class="button1" id="like" title="說的中肯" value="justice" onclick=";return false;">
+           <span><i class="fa fa-thumbs-up"></i> 公正</span>
+         </button>
+         <button class="button1" id="unlike" title="立場鮮明" value="injustice" onclick=";return false;">
+           <span><i class="fa fa-thumbs-down"></i> 偏頗</span>
+         </button>
+        <span> </span>
+        <a href="#modal-text" class="call-modal" title="推薦" style="color:#363636;">     <i class="fa fa-external-link"></i> 我想要推薦好新聞</a> 
+        <!-- A modal with its content -->
+        		<section class="semantic-content" id="modal-text"
+				tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+                    <div class="modal-inner">
+       			    	<inner_header>
+			    		  <h1 id="modal-label">我想推薦好新聞！</h1> <hr>
+		         		</inner_header>
+				        <div class="modal-content">
+			              <h2>新聞連結</h2>
+			            <input id="news" type="text" class="form-control" placeholder="新聞網址在這輸入！">
+			              <h2>我想說</h2>
+			            <textarea class="form-control" rows="8" placeholder="新聞網址在這輸入！"></textarea>    
+				        </div>
+                        <button class="button1" id="submit"  onclick=";return false;">
+                        <span> submit</span></button>
+			        </div>
+			       <!-- Use Hash-Bang to maintain scroll position when closing modal -->
+			      <a href="#!" class="modal-close" title="Close this modal" data-dismiss="modal">&times;</a>
+		       </section>
+		   <script src="js/modal.js"></script><!-- JS for Modal -->
+    
+        
+      <div class="question">覺得此篇新聞應被歸類在</div>
+          <button class="button1" id="editorial"  value="editorial" onclick=";return false;">
+              <span> 社論看法</span>
+          </button>      
+          <button class="button1" id="official"  value="official" onclick=";return false;">
+              <span> 官方消息</span>
+          </button>
+          <button class="button1" id="people"  value="people" onclick=";return false;">
+              <span> 人民聲音</span>
+          </button>
+          <button class="button1" id="other"  value="other" onclick=";return false;">      
+              <span> 其他</span>
+          </button>
+        </div>
+    
+    <div id="recommendation" class="grid_12">
+      <div class="question">聽聽其他聲音</div>
+        <table class="recom_news" border="0">
+         <tbody>
+          <tr>
+           <td class="news grid_3"id="renew1" 
+><a href="third-one.html">
+    核四圍阻體洩漏　經長、台電：很正常、過去核一二三也有</a>
+     </td>
+          <td class="news grid_3" id="renew2">推薦新聞2</td>
+           <td class="news grid_3" id="renew3">推薦新聞3</td>  
+          </tr>
+         </tbody>
+        </table>
+      <div class="question">你可能想看的社論</div>
+        <table class="recom_editor" border="0">
+         <tbody>
+          <tr>
+           <td class="news grid_3"id="reedi1">推薦社論1</td>
+           <td class="news grid_3" id="reedi2">推薦社論2</td>
+           <td class="news grid_3" id="reedi3">推薦社論3</td>  
+          </tr>
+         </tbody>
+        </table>  
+    </div>   
+  </div>
+    <footer class="grid_12">
+
+      <div>
+        <p>Copyright © 2014 Web programing, All Rights Reserved.</p>
+      </div>
+  
+    </footer>
+ 
+</body>
+    
+
+</html>
