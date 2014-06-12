@@ -27,7 +27,7 @@
             alert(newsTitle);
 
 
-            document.getElementById('putNewsHere').innerHTML = newsTitle;
+            document.getElementById('putNewsHere').value = newsTitle;
 
           },
           error:function(object,error){
