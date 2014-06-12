@@ -1,0 +1,81 @@
+@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/reset.css);
+@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/960.css);
+@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/text.css);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+html {
+    background:url(http://subtlepatterns.com/patterns/tweed.png) ;
+    width:1024px; 
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+header{
+    margin-left:-25px;
+    margin-top: 35px;
+    width:1015px;
+    position:absolute;
+	height:120px;
+    color: #ffffff;
+    display:inline;
+	background: url(http://subtlepatterns.com/patterns/dark_stripes.png);
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+.logo_img{
+    margin-top: 3px;
+    position: absolute;
+    display:  block;
+    margin-left:405px;
+    z-index: 9999;
+
+}
+
+#top_botton{
+    font-size:1.2em;
+    font-family: '微軟正黑體';
+    color:#c9c9c9;
+    position: relative;
+    float: right;
+    margin-top:50px;
+    text-shadow: 0px 2px 1px #3F372B;
+    text-align: right;
+}
+
+.un{
+  margin-top: 150px;
+  width:inherit; 
+  margin-bottom: 20px;
+  padding-top: 20px;    
+}
+
+#content-wrapper {
+/* position: relative; */
+z-index: 10;
+padding-bottom: 3px;
+background: url(http://subtlepatterns.com/patterns/binding_dark.png) center 0;
+.
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+.link:link, .link:visited, .link:active, .link:hover{
+  text-decoration: none ; 
+  color:#c9c9c9;
+}   
+
+footer {
+    display:table;
+    background:rgba(0,0,0,0.8);
+    color:#ffffff;
+	width:100%;
+	height:2.5em;
+    bottom: -1px;
+    font:10px/35px 'Ubuntu', serif;
+    text-align:center;
+    
+}

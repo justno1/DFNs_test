@@ -1,0 +1,221 @@
+@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/reset.css);
+@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/960.css);
+@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/text.css);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+html {
+   background: url(http://subtlepatterns.com/patterns/gun_metal.png);
+   overflow: hidden;    
+         
+}
+
+header{
+    padding: 5px;
+    padding-left: 220px;
+    padding-right: 220px;
+    margin-left: -205px;
+    background:#111111;
+    color:#ffffff;
+	height:50px;
+    width:930px;
+    font:10px/35px 'Oswald', serif;
+    text-align:center;
+    border-bottom: solid 4px #00BFFF; 
+  
+}
+
+.logo_word{
+    float: left; 
+    margin-left: 10px;
+}
+
+.top_right{
+    float: right;
+}
+
+.top_right:hover{
+	background-color: #00BFFF ;
+}
+
+.top-banner{
+    margin-top: 10px;
+    height:200px;
+    margin-left: 0px;
+    background:url(../img/banner.png);
+}
+
+#content-wrapper{
+/* position: relative; */
+z-index: 10;
+padding-bottom: 3px;
+background-color: rgba(0,0,0,0.7);    
+/*background: url(http://subtlepatterns.com/patterns/fake_brick.png) center 0;*/
+.
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+.fair_bar{
+    margin-top: 10px;
+    position: relative;
+}
+
+#fair{
+   border-bottom: solid 6px #ffb60f;
+   float: left;
+   height: 30px;  
+}
+
+#fair:hover{
+   background-image: url(../img/fair.png);
+   background-repeat: no-repeat;
+}
+
+#unfair{    
+   border-bottom: solid 6px #AAAAAA;
+   float: left;
+   height: 30px; 
+}
+
+#unfair:hover{
+   background-image: url(../img/unfair.png);
+   background-repeat: no-repeat;
+}
+
+.news_title{
+   margin-top: 280px;
+   color: #ffffff;
+   font-size: 1.7em;
+   font-family: '微軟正黑體';    
+   background: #008B8B;
+}
+
+#news_title{
+   margin-left:35px;
+}
+
+
+
+iframe{
+   margin:10px;
+   margin-top:15px;
+}
+
+#article{
+   background:#000000;
+   margin-left:205px;
+   margin-right:205px;
+}
+
+.question{
+  margin-bottom: 20px;    
+  margin-left:-20px;
+  width:220px;    
+  padding-left: 15px;
+  height:40px; 
+  line-height: 40px;      
+  background: #00BFFF;
+  font-size: 1.2em;
+  font-family: '微軟正黑體';
+  color: #ffffff;    
+  box-shadow: 0 1px 5px rgba(0,0,0,0.25), 0 0 50px rgba(0,0,0,0.1) inset;
+  border-radius: 1%     1%     1%     1% /     1%     1%     1%     1%;
+}
+
+.button1{
+  background: #ffffff;
+  color:#363636;
+  font-size: 1.2em;
+  height:30px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  margin-left: 10px;    
+}
+
+
+
+#under_article{
+   background:url(http://subtlepatterns.com/patterns/blackorchid.png);
+   height:auto;
+   padding-bottom:20px; 
+}
+
+#under_article a:link, #under_article a:visited, #under_article a:active, #under_article a:hover{
+   text-decoration: none ; 
+   color: #ffb60f; 
+}   
+
+#article_value{
+   display: inline-block;
+}
+
+#selection{
+  width:100px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  background: rgba(0,0,0,0,1);
+  color:#363636;
+  font-size: 1.2em;
+  height:30px
+}
+
+.recom_editor, .recom_news{
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right:10px;    
+}
+
+.news{
+  padding:1em;     
+/*  width:200px;*/
+  height:120px; 
+  overflow: hidden;
+  margin-bottom: 9px; 
+  font-size:1.5em;
+  font-family: '微軟正黑體';
+  color:#ffb60f;
+  text-shadow: 0px 2px 1px #3F372B;
+    margin-left:20px;
+}
+
+td{
+  background: #222222;    
+}
+
+td:hover{ 
+  background-color:#222222;     
+}
+
+.call-modal {
+  color: #000000;
+  background: #ffffff;
+  border-radius: 5px;    
+  margin-left: 10px;
+  font-size:1.2em;  
+  padding:5px;    
+}
+
+.call-modal:hover {
+  background-color: rgba(255,255,255,0.8);
+  padding:4px;
+  margin-left: 10px;
+}
+
+.link:link, .link:visited, .link:active, .link:hover{
+  text-decoration: none ; 
+  color:#c9c9c9;
+}   
+
+footer {
+    display:table;
+    background:rgba(0,0,0,0.8);
+    color:#ffffff;
+	width:140%;
+    margin-left:-175px;
+	height:4em;
+    bottom: -1px;
+    font:10px/35px 'Ubuntu', serif;
+    text-align:center;
+    
+}

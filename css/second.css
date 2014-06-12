@@ -1,0 +1,189 @@
+@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/reset.css);
+@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/960.css);
+@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/text.css);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+
+html {
+   background: url(http://subtlepatterns.com/patterns/gun_metal.png);
+   overflow: hidden;    
+         
+}
+
+header{
+    padding: 5px;
+    padding-left: 220px;
+    padding-right: 220px;
+    margin-left: -205px;
+    background:#111111;
+    color:#ffffff;
+	height:50px;
+    width:930px;
+    font:10px/35px 'Oswald', serif;
+    text-align:center;
+    border-bottom: solid 4px #00BFFF; 
+  
+}
+
+
+.logo_word{
+    float: left; 
+    margin-left: 10px;
+}
+
+.top_right{
+    float: right;
+}
+
+.top_right:hover{
+	background-color: #00BFFF ;
+}
+
+.top-banner{
+    margin-top: 10px;
+    height:200px;
+    margin-left: -0.5px;
+    background:url(../img/banner.png);
+}
+
+#contain{
+/* position: relative; */
+z-index: 10;
+padding-bottom: 3px;
+background-color: rgba(0,0,0,0.7);    
+/*background: url(http://subtlepatterns.com/patterns/fake_brick.png) center 0;*/
+.
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+
+.top-menu{
+  margin-top:25px;
+  margin-bottom:10px;
+  margin-left: -0px;    
+  background-color: #008B8B;
+  
+}
+
+
+#main-menu a{
+		text-decoration: none;
+		color:#ffffff;
+        font:bold;
+}
+
+#main-menu li{
+    width:140px;
+    background-color: none;
+    display:inline;
+	float:left;
+    font-size: 20px;
+	font-family: '微軟正黑體';
+    text-decoration: none;
+    padding:3px 16px;
+	margin-left: 10px;
+    border-right:solid 3px #ffffff;
+}  
+    
+#main-menu li:hover{
+    background: #ffd409; 
+}
+
+#main-menu a:hover{
+    color: #054a4a;
+}
+
+tr{
+    width:95%;
+    padding-right: 100px;
+    border-bottom: solid 4px #111111;
+}
+
+td {
+    height:200px; 
+    overflow: hidden;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 10px;
+
+}
+
+
+table td{
+    color:white;
+	font-family: '微軟正黑體';
+}
+
+table a{
+	color:#FEFF91;
+	font-family: '微軟正黑體';
+	text-decoration: none;
+    padding-left: 10px;
+    border-left:solid 2px #ffd409;
+}
+
+table{
+    
+	padding-top: 2em;  
+}
+
+
+table p{
+	padding-right: 25px;
+    padding-left:15px; 
+}
+
+table td img{
+	padding: 5px;    
+}
+
+//.pagebtnA{
+	font-family: '微軟正黑體';
+	font-size: 18px;
+	text-decoration: none;
+}
+.pagebtnA a{
+	font-family: '微軟正黑體';
+	font-size: 14px;
+	text-decoration: none;	
+	color:#c9c9c9;
+	padding:7px;
+	margin-right:5px;
+    background: rgba(0,0,0,0.6);
+}
+
+.pagebtnA a:hover{
+    background: rgba(255,255,255,0.3);
+}
+
+.pagebtnA{
+	color:#c9c9c9;
+
+}
+
+
+.link:link, .link:visited, .link:active, .link:hover{
+  text-decoration: none ; 
+  color:#c9c9c9;
+}   
+
+
+#pagebtn{
+	text-align: center;
+}
+
+
+
+footer {
+    position: relative;
+    margin-left: -205px;
+    width:100%;
+    height:40px;
+    background:#111111;
+    color:#666666;
+    font:6px 'Open Sans', cursive;
+    text-align:left;
+    padding-top: 40px 10px;
+}
