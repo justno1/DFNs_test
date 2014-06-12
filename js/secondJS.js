@@ -40,7 +40,7 @@
                           +"</a></h2><p>"
                           +  newsText
                           +"</p></td></tr>";  
-            $("#putNewsHere").append(str);
+            $("#putNewsHere").append(putANews);
 
           },
           error:function(object,error){
