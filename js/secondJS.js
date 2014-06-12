@@ -37,7 +37,6 @@
  /* router設定*/
 
   var router = Parse.Router.extend({
-        alert("In router");
 
     routes:{
 //      'index/': 'index',
