@@ -24,12 +24,12 @@
             var newsText = news.get("text");
 
             console.log();
-            alert(newsTitle);
+            alert(newsPicture);
 
 
             document.getElementById('putNewsHere').value = newsTitle;
             var str="<img id=getPicUrl src="+ news.picture +">";
-            $("#putNewsHere").append(str);
+ //           $("#putNewsHere").append(str);
 
           },
           error:function(object,error){
