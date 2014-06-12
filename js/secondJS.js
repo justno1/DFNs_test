@@ -22,6 +22,7 @@
             var newsTitle = news.get("title");
             var newsPicture = news.get("picture");
             var newsText = news.get("text");
+            var newsUrl = news.get("website");
 
             alert(newsPicture);
             console.log(newsPicture);
@@ -30,6 +31,15 @@
 
             document.getElementById('putNewsHere').value = newsTitle;
             var str="<img src="+ newsPicture +">";
+            var putANews= "<tr class='hot'><td class='grid_4 alpha' id='picF'><img src=" 
+                          + newsPicture 
+                          + "></td><td class='ab grid_8 omega'><h2><a href=" 
+                          +  newsUrl 
+                          + ">"
+                          +  newsTitle
+                          +"</a></h2><p>"
+                          +  newsText
+                          +"</p></td></tr>";  
             $("#putNewsHere").append(str);
 
           },
