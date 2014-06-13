@@ -20,8 +20,8 @@
           success:function(news){
             for(var i=0;i<news.length;i++)
             {
-              var objectNews = news[i];
-
+            
+            var objectNews = news[i];
             var newsTitle = objectNews.get("title");
             var newsPicture = objectNews.get("picture");
             var newsText = objectNews.get("text");
@@ -54,8 +54,7 @@
       }
    	};
 
-    handler.classficationFunc();
-
+    $('#worthyReading').on('click',function(){handler.classficationFunc();});
 
 
  /* router設定*/
