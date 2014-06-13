@@ -16,7 +16,8 @@
 //        alert("In classficationFunc");
         var News = Parse.Object.extend("data");
         var query = new Parse.Query(News);
-        query.find(udn,{
+        query.equalTo("enmedia","udn");
+        query.find({
           success:function(news){
             for(var i=0;i<news.length;i++)
             {
