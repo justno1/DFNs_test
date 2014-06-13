@@ -15,6 +15,7 @@
         var News = Parse.Object.extend("data");
         var query = new Parse.Query(News);
         var clickWhatID = clickID;
+        console.log(clickWhatID);
         query.equalTo("enmedia","udn");
         query.find({
           success:function(news){
