@@ -10,12 +10,11 @@
 
       },
 
-
      /* 分頁功能 ＋ 顯示新聞圖片 標題 內文 */
-      classficationFunc:function(){
-//        alert("In classficationFunc");
+      classficationFunc:function(clickID){
         var News = Parse.Object.extend("data");
         var query = new Parse.Query(News);
+        var clickWhatID = clickID;
         query.equalTo("enmedia","udn");
         query.find({
           success:function(news){
@@ -31,9 +30,6 @@
  //           alert(newsPicture);
             console.log(newsPicture);
 
-
-
- //           document.getElementById('putNewsHere').value = newsTitle;
             var str="<img src="+ newsPicture +">";
             var putANews= "<tr class='hot'><td class='grid_4 alpha' id='picF'><img crossorigin='Anonymous' src=" 
                           + newsPicture 
@@ -56,7 +52,7 @@
    	};
 
     $('#worthyReading').on('click',function(){handler.classficationFunc();});
-    $('#editorial').on('click',function(){handler.classficationFunc();});
+    $('#editorial').on('click',function(){handler.classficationFunc('#editorial');});
     $('#officialSound').on('click',function(){handler.classficationFunc();});
     $('#peopleSound').on('click',function(){handler.classficationFunc();});
     $('#otherSound').on('click',function(){handler.classficationFunc();});
