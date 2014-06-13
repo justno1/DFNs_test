@@ -14,9 +14,23 @@
       classficationFunc:function(clickID){
         var News = Parse.Object.extend("data");
         var query = new Parse.Query(News);
+        document.getElementById('putNewsHere').innerHTML = "";
+
+        
         var clickWhatID = clickID;
+        if(clickWhatID==="worthyReading"){
+          query.equalTo();
+        }else if(clickWhatID==="editorial"){
+          query.greaterThan("editorial", 0);
+        }else if(clickWhatID==="officialSound"){
+          query.greaterThan("official", 0);
+        }else if(clickWhatID==="peopleSound"){
+          query.greaterThan("people", 0);
+        }else if(clickWhatID==="otherSound"){
+          query.greaterThan("other", 0);
+        }
+
         console.log("this is the ID that you click : "+clickWhatID);
-        query.equalTo("enmedia","udn");
         query.find({
           success:function(news){
             for(var i=0;i<news.length;i++)
@@ -52,11 +66,11 @@
       }
    	};
 
-    $('#worthyReading').on('click',function(){handler.classficationFunc();});
-    $('#editorial').on('click',function(){handler.classficationFunc('#editorial');});
-    $('#officialSound').on('click',function(){handler.classficationFunc();});
-    $('#peopleSound').on('click',function(){handler.classficationFunc();});
-    $('#otherSound').on('click',function(){handler.classficationFunc();});
+    $('#worthyReading').on('click',function(){handler.classficationFunc('worthyReading');});
+    $('#editorial').on('click',function(){handler.classficationFunc('editorial');});
+    $('#officialSound').on('click',function(){handler.classficationFunc('officialSound');});
+    $('#peopleSound').on('click',function(){handler.classficationFunc('peopleSound');});
+    $('#otherSound').on('click',function(){handler.classficationFunc('otherSound');});
 
 
  /* router設定*/
