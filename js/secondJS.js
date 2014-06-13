@@ -33,7 +33,7 @@
 
 
 
-            document.getElementById('putNewsHere').value = newsTitle;
+ //           document.getElementById('putNewsHere').value = newsTitle;
             var str="<img src="+ newsPicture +">";
             var putANews= "<tr class='hot'><td class='grid_4 alpha' id='picF'><img crossorigin='Anonymous' src=" 
                           + newsPicture 
