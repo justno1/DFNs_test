@@ -16,7 +16,7 @@
 //        alert("In classficationFunc");
         var News = Parse.Object.extend("data");
         var query = new Parse.Query(News);
-        query.find({
+        query.find(udn,{
           success:function(news){
             for(var i=0;i<news.length;i++)
             {
@@ -55,6 +55,10 @@
    	};
 
     $('#worthyReading').on('click',function(){handler.classficationFunc();});
+    $('#editorial').on('click',function(){handler.classficationFunc();});
+    $('#officialSound').on('click',function(){handler.classficationFunc();});
+    $('#peopleSound').on('click',function(){handler.classficationFunc();});
+    $('#otherSound').on('click',function(){handler.classficationFunc();});
 
 
  /* router設定*/
