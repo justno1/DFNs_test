@@ -106,6 +106,7 @@
               if (response.status === 'connected') {
               alert("connected");
               var uid = response.authResponse.userID;
+              var accessToken = response.authResponse.accessToken;
 
               }else if (response.status === 'not_authorized') {
                   alert("not_authorized");
@@ -132,6 +133,7 @@
                 });
               }
            });
+
         };
     });
 
