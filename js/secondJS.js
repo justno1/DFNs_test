@@ -96,6 +96,8 @@
 
         window.fbAsyncInit = function () {
 
+          alert("FB init!!");
+
           FB.init({
             appId: '240934986105772', 
             xfbml: true,
