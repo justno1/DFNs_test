@@ -93,7 +93,7 @@
             var newsTitle = objectNews.get("title");
             var newsPicture = objectNews.get("picture");
             var newsText = objectNews.get("text");
-//            var newsUrl = objectNews.get("website"); //可能就用不到了？
+//            var newsUrl = objectNews.get("website"); //在這頁可能暫時用不到(?)
 
             alert(newsIDinParse);
             console.log(newsIDinParse);
