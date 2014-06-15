@@ -23,7 +23,7 @@
 
     var handler = {
 
-    FB.getLoginStatus:function(response) {
+    FB_getLoginStatus:function(response) {
         if (response.status === 'connected') {
         alert("connected");
         var uid = response.authResponse.userID;
