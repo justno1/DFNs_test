@@ -73,14 +73,11 @@
     $('#peopleSound').on('click',function(){handler.classficationFunc('peopleSound');});
     $('#otherSound').on('click',function(){handler.classficationFunc('otherSound');});
 
-    //click personal page >> check the login status
-    //--if logged >> in then turn the page into personal page
-    //--if not >> logging window popout >> then turn the page into personal page
-    $('#personalPage').on('click',function(){handler.classficationFunc('otherSound');});
-
-    //click logInButton >> check the login status
+    //forLoginCheck = personalPage + logIn
     //if not log in >> pop out
-    $('#logInButton').on('click',function(){
+    //Click personalPage >> turn the page into personal page
+    //Click logIn >> stay in the same page
+    $('#forLoginCheck').on('click',function(){
 
         //LOAD FACEBOOK SDK ASYNC
         (function (d, s, id) {
