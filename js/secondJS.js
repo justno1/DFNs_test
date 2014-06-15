@@ -95,7 +95,7 @@
             var newsText = objectNews.get("text");
 //            var newsUrl = objectNews.get("website"); //可能就用不到了？
 
- //           alert(newsPicture);
+            alert(newsIDinParse);
             console.log(newsIDinParse);
 
             var str="<img src="+ newsPicture +">";
