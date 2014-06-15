@@ -25,6 +25,7 @@
         version: 'v2.0'
       });
 
+      //It's time to change the button!!!
       FB.getLoginStatus(function(response) {
           if (response.status === 'connected') {
               document.getElementById('logInButton').style.display = "none"; 
