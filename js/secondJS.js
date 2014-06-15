@@ -138,6 +138,6 @@
            });
     });
 
-  handler.navbarFunc();
+//  handler.navbarFunc();
 
 })();
