@@ -3,7 +3,56 @@
 //初始化Parse();
   Parse.initialize('5M7ztCYOUkQbUkiFmww8RmM1GTKyTKl2wjMUMQla','MqZ4M3m5hrvO11SqnCT86r8buTqCjlTQhjPV10ZB');
 
+  FB.init({
+    appId: '240934986105772', 
+    xfbml: true,
+    version: 'v2.0'
+  });
+
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+        return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js"; 
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+
     var handler = {
+
+    FB.getLoginStatus:function(response) {
+        if (response.status === 'connected') {
+        alert("connected");
+        var uid = response.authResponse.userID;
+
+        }else if (response.status === 'not_authorized') {
+            alert("not_authorized");
+        //要求使用者登入，索取publish_actions權限
+        console.log("this user is not authorizied your apps");
+        FB.login(function (response) {
+             FB.api('/me/feed', 'post', {message: 'I\'m started using FB API'});
+            if (response.authResponse) { // if user login to your apps right after handle an event
+                window.location.reload();
+            };
+        }, {
+            scope: 'user_about_me,email,user_location,user_photos,publish_actions,user_birthday,user_likes'
+        });      
+        } else {
+              alert("just log in!");
+          //同樣要求使用者登入
+          console.log("Please log in to Facebook first.");
+          FB.login(function (response) {
+              if (response.authResponse) {
+                  window.location.reload();
+              } else {
+                  alertify.alert('An Error has Occurs,Please Reload your Pages');
+              }
+          });
+        }
+     };
 
      /* header按鈕變更      if 已登入 > 登入鍵消失    else if 點擊登入按鈕跳出FB登入跳窗 */
       navbarFunc:function(){
@@ -15,7 +64,6 @@
         var News = Parse.Object.extend("data");
         var query = new Parse.Query(News);
         document.getElementById('putNewsHere').innerHTML = "";
-
         
         var clickWhatID = clickID;
         if(clickWhatID==="worthyReading"){
@@ -37,19 +85,21 @@
             {
             
             var objectNews = news[i];
+            var newsIDinParse = objectNews.get("objectID");
             var newsTitle = objectNews.get("title");
             var newsPicture = objectNews.get("picture");
             var newsText = objectNews.get("text");
-            var newsUrl = objectNews.get("website");
+//            var newsUrl = objectNews.get("website"); //可能就用不到了？
 
  //           alert(newsPicture);
-            console.log(newsPicture);
+            console.log(newsIDinParse);
 
             var str="<img src="+ newsPicture +">";
             var putANews= "<tr class='hot'><td class='grid_4 alpha' id='picF'><img crossorigin='Anonymous' src=" 
                           + newsPicture 
                           + "></td><td class='ab grid_8 omega'><h2><a href=" 
-                          +  newsUrl 
+                          + "#"
+                          + newsIDinParse
                           + ">"
                           +  newsTitle
                           +"</a></h2><p>"
@@ -71,29 +121,5 @@
     $('#officialSound').on('click',function(){handler.classficationFunc('officialSound');});
     $('#peopleSound').on('click',function(){handler.classficationFunc('peopleSound');});
     $('#otherSound').on('click',function(){handler.classficationFunc('otherSound');});
-
-
- /* router設定*/
-/*
-  var router = Parse.Router.extend({
-
-    routes:{
-//      'index/': 'index',
-      'second.html': 'classfication',
-//      'third/:news_id': 'news',
-//      'personalpage/': 'personalpage',
-      
-    },
-
- //   index: handler. ,
-    classfication: handler.classficationFunc ,
- //   news: handler.classficationFunc ,
- //   personalpage: handler. ,
-
-   });
-*/
-//  this.Router = new router();
-//  Parse.history.start();
-
 
 })();
