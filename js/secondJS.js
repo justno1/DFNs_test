@@ -1,57 +1,5 @@
 (function(){
 
-  (function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {
-        return;
-    }
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js"; 
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
-  window.fbAsyncInit = function () {
-
-  FB.init({
-    appId: '240934986105772', 
-    xfbml: true,
-    version: 'v2.0'
-  });
-
-  FB.getLoginStatus(function(response) {
-      if (response.status === 'connected') {
-      alert("connected");
-      var uid = response.authResponse.userID;
-
-      }else if (response.status === 'not_authorized') {
-          alert("not_authorized");
-      //要求使用者登入，索取publish_actions權限
-      console.log("this user is not authorizied your apps");
-      FB.login(function (response) {
-           FB.api('/me/feed', 'post', {message: 'I\'m started using FB API'});
-          if (response.authResponse) { // if user login to your apps right after handle an event
-              window.location.reload();
-          };
-      }, {
-          scope: 'user_about_me,email,user_location,user_photos,publish_actions,user_birthday,user_likes'
-      });      
-      } else {
-            alert("just log in!");
-        //同樣要求使用者登入
-        console.log("Please log in to Facebook first.");
-        FB.login(function (response) {
-            if (response.authResponse) {
-                window.location.reload();
-            } else {
-                alertify.alert('An Error has Occurs,Please Reload your Pages');
-            }
-        });
-      }
-   });
-
-  };
-
 //初始化Parse();
   Parse.initialize('5M7ztCYOUkQbUkiFmww8RmM1GTKyTKl2wjMUMQla','MqZ4M3m5hrvO11SqnCT86r8buTqCjlTQhjPV10ZB');
 
@@ -126,10 +74,65 @@
     $('#peopleSound').on('click',function(){handler.classficationFunc('peopleSound');});
     $('#otherSound').on('click',function(){handler.classficationFunc('otherSound');});
 
-    //click personal page >> check the login Status
+    //click personal page >> check the login status
     //--if logged >> in then turn the page into personal page
     //--if not >> logging window popout >> then turn the page into personal page
     $('#personalPage').on('click',function(){handler.classficationFunc('otherSound');});
 
+    //click logInButton >> check the login status
+    //if not log in >> pop out
+    $('#logInButton').on('click',function(){
+
+        (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js"; 
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        window.fbAsyncInit = function () {
+
+          FB.init({
+            appId: '240934986105772', 
+            xfbml: true,
+            version: 'v2.0'
+          });
+
+          FB.getLoginStatus(function(response) {
+              if (response.status === 'connected') {
+              alert("connected");
+              var uid = response.authResponse.userID;
+
+              }else if (response.status === 'not_authorized') {
+                  alert("not_authorized");
+              //要求使用者登入，索取publish_actions權限
+              console.log("this user is not authorizied your apps");
+              FB.login(function (response) {
+                   FB.api('/me/feed', 'post', {message: 'I\'m started using FB API'});
+                  if (response.authResponse) { // if user login to your apps right after handle an event
+                      window.location.reload();
+                  };
+              }, {
+                  scope: 'user_about_me,email,user_location,user_photos,publish_actions,user_birthday,user_likes'
+              });      
+              } else {
+                    alert("just log in!");
+                //同樣要求使用者登入
+                console.log("Please log in to Facebook first.");
+                FB.login(function (response) {
+                    if (response.authResponse) {
+                        window.location.reload();
+                    } else {
+                        alertify.alert('An Error has Occurs,Please Reload your Pages');
+                    }
+                });
+              }
+           });
+        };
+    });
 
 })();
