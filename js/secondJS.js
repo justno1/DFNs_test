@@ -1,7 +1,6 @@
 (function(){
 
-//初始化Parse();
-  Parse.initialize('5M7ztCYOUkQbUkiFmww8RmM1GTKyTKl2wjMUMQla','MqZ4M3m5hrvO11SqnCT86r8buTqCjlTQhjPV10ZB');
+  window.fbAsyncInit = function () {
 
   FB.init({
     appId: '240934986105772', 
@@ -19,6 +18,11 @@
     js.src = "//connect.facebook.net/en_US/sdk.js"; 
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+
+  };
+
+//初始化Parse();
+  Parse.initialize('5M7ztCYOUkQbUkiFmww8RmM1GTKyTKl2wjMUMQla','MqZ4M3m5hrvO11SqnCT86r8buTqCjlTQhjPV10ZB');
 
 
     var handler = {
