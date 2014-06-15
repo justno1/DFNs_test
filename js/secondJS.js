@@ -2,7 +2,6 @@
 
 //初始化Parse();
   Parse.initialize('5M7ztCYOUkQbUkiFmww8RmM1GTKyTKl2wjMUMQla','MqZ4M3m5hrvO11SqnCT86r8buTqCjlTQhjPV10ZB');
-  handler.navbarFunc();
 
     var handler = {
 
@@ -138,4 +137,6 @@
         };
     });
 
+  handler.navbarFunc();
+  
 })();
