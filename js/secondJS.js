@@ -65,7 +65,7 @@
 
      /* 分頁功能 ＋ 顯示新聞圖片 標題 內文 */
       classficationFunc:function(clickID){
-        var News = Parse.Object.extend("data");
+        var News = Parse.Object.extend("Data");
         var query = new Parse.Query(News);
         document.getElementById('putNewsHere').innerHTML = "";
         
