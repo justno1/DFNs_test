@@ -8,26 +8,22 @@
      /* header按鈕變更      if 已登入 > 登入鍵消失    else if 點擊登入按鈕跳出FB登入跳窗 */
       navbarFunc:function(){
 
+ //      document.getElementById('loginButton').style.display = "display"; 
+
       },
 
-     /* 分頁功能 ＋ 顯示新聞圖片 標題 內文 */
+     /* paging(?) ＋ print the title & text & image */
       classficationFunc:function(clickID){
         var News = Parse.Object.extend("Data");
         var query = new Parse.Query(News);
         document.getElementById('putNewsHere').innerHTML = "";
         
         var clickWhatID = clickID;
-        if(clickWhatID==="worthyReading"){
-          query.equalTo();
-        }else if(clickWhatID==="editorial"){
-          query.greaterThan("editorial", 0);
-        }else if(clickWhatID==="officialSound"){
-          query.greaterThan("official", 0);
-        }else if(clickWhatID==="peopleSound"){
-          query.greaterThan("people", 0);
-        }else if(clickWhatID==="otherSound"){
-          query.greaterThan("other", 0);
-        }
+        if(clickWhatID==="worthyReading"){query.equalTo();}
+        else if(clickWhatID==="editorial"){query.greaterThan("editorial", 0);}
+        else if(clickWhatID==="officialSound"){query.greaterThan("official", 0);}
+        else if(clickWhatID==="peopleSound"){query.greaterThan("people", 0);}
+        else if(clickWhatID==="otherSound"){query.greaterThan("other", 0);}
 
         console.log("this is the ID that you click : "+clickWhatID);
         query.find({
@@ -77,7 +73,7 @@
     //if not log in >> pop out
     //Click personalPage >> turn the page into personal page
     //Click logIn >> stay in the same page
-    $('#forLoginCheck').on('click',function(){
+    $('#logInButton').on('click',function(){
 
         //LOAD FACEBOOK SDK ASYNC
         (function (d, s, id) {
