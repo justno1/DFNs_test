@@ -69,8 +69,8 @@
     $('#peopleSound').on('click',function(){handler.classficationFunc('peopleSound');});
     $('#otherSound').on('click',function(){handler.classficationFunc('otherSound');});
 
-    //forLoginCheck = personalPage + logIn
-    //if not log in >> pop out
+    //forLoginCheck = personalPage & logIn
+    //if not log in >> pop out the login window
     //Click personalPage >> turn the page into personal page
     //Click logIn >> stay in the same page
     $('#logInButton').on('click',function(){
@@ -108,7 +108,6 @@
               //要求使用者登入，索取publish_actions權限
               console.log("this user is not authorizied your apps");
               FB.login(function (response) {
-                   FB.api('/me/feed', 'post', {message: 'I\'m started using FB API'});
                   if (response.authResponse) { // if user login to your apps right after handle an event
                       window.location.reload();
                   };
@@ -118,7 +117,6 @@
               } else {
                     alert("just log in!");
                 //同樣要求使用者登入
-                console.log("Please log in to Facebook first.");
                 FB.login(function (response) {
                     if (response.authResponse) {
                         window.location.reload();
