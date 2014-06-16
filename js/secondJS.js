@@ -1,7 +1,7 @@
 (function(){
 
 //初始化Parse();
-  Parse.initialize('5M7ztCYOUkQbUkiFmww8RmM1GTKyTKl2wjMUMQla','MqZ4M3m5hrvO11SqnCT86r8buTqCjlTQhjPV10ZB');
+  Parse.initialize('LXu553qsB1idva0RxKbksnYdbwn54XQE1JxPX4rJ','6Bh7L4V3kTKPoINzY72A1AYcMWdT1jnJuhHtnPGD');
 
 //LOAD FACEBOOK SDK ASYNC
     (function (d, s, id) {
