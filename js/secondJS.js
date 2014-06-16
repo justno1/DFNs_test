@@ -38,7 +38,7 @@
 
     };
 
-    var 
+    var classificationStatus = "";
     var handler = {
 
      /* header按鈕變更      if 已登入 > 登入鍵消失    else if 點擊登入按鈕跳出FB登入跳窗 */
