@@ -38,6 +38,7 @@
 
     };
 
+    var 
     var handler = {
 
      /* header按鈕變更      if 已登入 > 登入鍵消失    else if 點擊登入按鈕跳出FB登入跳窗 */
@@ -46,7 +47,7 @@
       },
 
      /* paging(?) ＋ print the title & text & image */
-      classficationFunc:function(clickID){
+      classificationFunc:function(clickID){
         var News = Parse.Object.extend("Data");
         var query = new Parse.Query(News);
         document.getElementById('putNewsHere').innerHTML = "";
@@ -93,14 +94,14 @@
       }
    	};
 
-    //get into classfication page >> list all the news in database
-    $('#worthyReading').on('click',function(){handler.classficationFunc('worthyReading');}); 
+    //get into classification page >> list all the news in database
+    $('#worthyReading').on('click',function(){handler.classificationFunc('worthyReading');}); 
 
     //click different buttons >> clear the "tbody" >> do the query and print out
-    $('#editorial').on('click',function(){handler.classficationFunc('editorial');});
-    $('#officialSound').on('click',function(){handler.classficationFunc('officialSound');});
-    $('#peopleSound').on('click',function(){handler.classficationFunc('peopleSound');});
-    $('#otherSound').on('click',function(){handler.classficationFunc('otherSound');});
+    $('#editorial').on('click',function(){handler.classificationFunc('editorial');});
+    $('#officialSound').on('click',function(){handler.classificationFunc('officialSound');});
+    $('#peopleSound').on('click',function(){handler.classificationFunc('peopleSound');});
+    $('#otherSound').on('click',function(){handler.classificationFunc('otherSound');});
 
     //forLoginCheck = personalPage & logIn
     //if not log in >> pop out the login window
