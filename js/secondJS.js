@@ -65,7 +65,7 @@
             {
             
             var objectNews = news[i];
-            var newsIDinParse = objectNews.get("objectId");
+            var newsIDinParse = objectNews.id;
             var newsTitle = objectNews.get("title");
             var newsPicture = objectNews.get("picture");
             var newsText = objectNews.get("text");
