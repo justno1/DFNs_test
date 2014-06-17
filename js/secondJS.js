@@ -3,6 +3,8 @@
 //初始化Parse();
   Parse.initialize('LXu553qsB1idva0RxKbksnYdbwn54XQE1JxPX4rJ','6Bh7L4V3kTKPoINzY72A1AYcMWdT1jnJuhHtnPGD');
 
+
+/*
 //LOAD FACEBOOK SDK ASYNC
     (function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -36,9 +38,10 @@
           }
        });
 
-    };
-
-    var classificationStatus = "";
+    
+    */
+    
+//    var classificationStatus = "";
     var handler = {
 
      /* header按鈕變更      if 已登入 > 登入鍵消失    else if 點擊登入按鈕跳出FB登入跳窗 */
@@ -50,6 +53,9 @@
       classificationFunc:function(clickID){
         var News = Parse.Object.extend("Data");
         var query = new Parse.Query(News);
+        var limitNumber = 5;
+        var pageNumber = 1;
+        var skipTotal = limitNumber * (pageNumber -1);   
         document.getElementById('putNewsHere').innerHTML = "";
         
         var clickWhatID = clickID;  
@@ -71,9 +77,6 @@
             var newsPicture = objectNews.get("picture");
             var newsText = objectNews.get("text");
 //            var newsUrl = objectNews.get("website"); //在這頁可能暫時用不到(?)
-
-//            alert(newsIDinParse);
-            console.log(newsIDinParse);
 
             var str="<img src="+ newsPicture +">";
             var putANews= "<tr class='hot'><td class='grid_4 alpha' id='picF'><img crossorigin='Anonymous' src=" 
@@ -103,6 +106,7 @@
     $('#peopleSound').on('click',function(){handler.classificationFunc('peopleSound');});
     $('#otherSound').on('click',function(){handler.classificationFunc('otherSound');});
 
+/*
     //forLoginCheck = personalPage & logIn
     //if not log in >> pop out the login window
     //Click personalPage >> turn the page into personal page
@@ -139,5 +143,6 @@
               }
            });
     });
+*/
 
 })();
