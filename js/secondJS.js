@@ -52,7 +52,7 @@
         var query = new Parse.Query(News);
         document.getElementById('putNewsHere').innerHTML = "";
         
-        var clickWhatID = clickID;
+        var clickWhatID = clickID;  
         if(clickWhatID==="worthyReading"){query.equalTo();}
         else if(clickWhatID==="editorial"){query.greaterThan("editorial", 0);}
         else if(clickWhatID==="officialSound"){query.greaterThan("official", 0);}
@@ -127,7 +127,7 @@
                   scope: 'user_about_me,email,user_location,user_photos,publish_actions,user_birthday,user_likes'
               });      
               } else {
-                    alert("just log in!");
+                    alert("please log in!");
                 //同樣要求使用者登入
                 FB.login(function (response) {
                     if (response.authResponse) {
@@ -139,7 +139,5 @@
               }
            });
     });
-
-//  handler.navbarFunc();
 
 })();
