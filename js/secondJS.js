@@ -60,6 +60,8 @@
       }
    	};
 
+    handler.classificationFunc();
+
     //get into classification page >> list all the news in database
     $('#worthyReading').on('click',function(){handler.classificationFunc('worthyReading');}); 
 
