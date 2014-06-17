@@ -3,44 +3,6 @@
 //初始化Parse();
   Parse.initialize('LXu553qsB1idva0RxKbksnYdbwn54XQE1JxPX4rJ','6Bh7L4V3kTKPoINzY72A1AYcMWdT1jnJuhHtnPGD');
 
-
-/*
-//LOAD FACEBOOK SDK ASYNC
-    (function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {
-        return;
-    }
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js"; 
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    window.fbAsyncInit = function () {
-
- //     alert("FB init!!");
-
-      FB.init({
-        appId: '240934986105772', 
-        xfbml: true,
-        version: 'v2.0'
-      });
-
-      //It's time to change the button!!!
-      FB.getLoginStatus(function(response) {
-          if (response.status === 'connected') {
-              document.getElementById('logInButton').style.display = "none"; 
-
-          }else {
-              document.getElementById('logInButton').style.display = "display"; 
-
-          }
-       });
-
-    
-    */
-    
 //    var classificationStatus = "";
     var handler = {
 
@@ -58,8 +20,9 @@
         var skipTotal = limitNumber * (pageNumber -1);   
         document.getElementById('putNewsHere').innerHTML = "";
         
+        if(clickID === null){query.equalTo();}
         var clickWhatID = clickID;  
-        if(clickWhatID==="worthyReading"){query.equalTo();}
+        if(clickWhatID==="worthyReading"){query.equalTo(); query.descending("like");}
         else if(clickWhatID==="editorial"){query.greaterThan("editorial", 0);}
         else if(clickWhatID==="officialSound"){query.greaterThan("official", 0);}
         else if(clickWhatID==="peopleSound"){query.greaterThan("people", 0);}
@@ -104,7 +67,56 @@
     $('#editorial').on('click',function(){handler.classificationFunc('editorial');});
     $('#officialSound').on('click',function(){handler.classificationFunc('officialSound');});
     $('#peopleSound').on('click',function(){handler.classificationFunc('peopleSound');});
-    $('#otherSound').on('click',function(){handler.classificationFunc('otherSound');});
+    $('#otherSound').on('click',function(){handler.classificationFunc('otherSound');});  
+
+    $('#pageBtn1').on('click',function(){});
+    $('#pageBtn2').on('click',function(){});
+    $('#pageBtn3').on('click',function(){});
+
+
+})();
+
+
+
+
+
+/*
+//LOAD FACEBOOK SDK ASYNC
+    (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+        return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js"; 
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    window.fbAsyncInit = function () {
+
+ //     alert("FB init!!");
+
+      FB.init({
+        appId: '240934986105772', 
+        xfbml: true,
+        version: 'v2.0'
+      });
+
+      //It's time to change the button!!!
+      FB.getLoginStatus(function(response) {
+          if (response.status === 'connected') {
+              document.getElementById('logInButton').style.display = "none"; 
+
+          }else {
+              document.getElementById('logInButton').style.display = "display"; 
+
+          }
+       });
+
+    
+    */
+
 
 /*
     //forLoginCheck = personalPage & logIn
@@ -144,5 +156,3 @@
            });
     });
 */
-
-})();
