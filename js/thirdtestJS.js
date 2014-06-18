@@ -1,5 +1,7 @@
 Parse.initialize("LXu553qsB1idva0RxKbksnYdbwn54XQE1JxPX4rJ", "6Bh7L4V3kTKPoINzY72A1AYcMWdT1jnJuhHtnPGD");
 
+var userIdForParse = "";
+
 $( document ).ready(function() {
   FB.getLoginStatus(function(response) {
     if (response.status === 'connected') {
@@ -9,9 +11,6 @@ $( document ).ready(function() {
     }
   })
 });
-
-
-var userIdForParse = "";
 
 var strurl = location.search;
 var ParaVal;
