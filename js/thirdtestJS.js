@@ -7,7 +7,7 @@ $( document ).ready(function() {
         userIdForParse = response.id;
         });     
     }
-  };
+  }
 });
 
 
