@@ -3,15 +3,15 @@ Parse.initialize("LXu553qsB1idva0RxKbksnYdbwn54XQE1JxPX4rJ", "6Bh7L4V3kTKPoINzY7
 var userIdForParse = "";
 
 
-
+window.fbAsyncInit = function () {
 FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     FB.api('/me', function (response) {
       userIdForParse = response.id;
       });     
   }
+  };
 };
-
 
 var strurl = location.search;
 var ParaVal;
@@ -43,7 +43,24 @@ var thisNewsMedia = "";
     thisNewsMedia = newsmedia; 
     console.log(newsmedia);
 
+    //save user record into Parse
+    var Record = Parse.Object.extend("surfingRecord");
+    var record = new Record();
+    record.set("userObjectId",userIdForParse);
+    record.set("newsObjectId",takeid);
+    record.set("newsTitle",newstitle);
 
+    record.save(null, {
+      success: function(record) {
+        // Execute any logic that should take place after the object is saved.
+        alert("Parse saving success");
+      },
+      error: function(record, error) {
+        // Execute any logic that should take place if the save fails.
+        // error is a Parse.Error with an error code and description.
+        alert("Parse saving failed");
+      }
+    });
          
       
       //recommendation news //havent't replace the link
