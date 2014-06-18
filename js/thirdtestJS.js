@@ -3,14 +3,11 @@ Parse.initialize("LXu553qsB1idva0RxKbksnYdbwn54XQE1JxPX4rJ", "6Bh7L4V3kTKPoINzY7
 var userIdForParse = "";
 
 $( document ).ready(function() {
-  FB.getLoginStatus(function(response) {
-    if (response.status === 'connected') {
+  
       FB.api('/me', function (response) {
         userIdForParse = response.id;
       });
-      alert(userIdForParse);     
-    }
-  })
+
 });
 
 var strurl = location.search;
