@@ -37,16 +37,7 @@ var thisNewsMedia = "";
     var newsother = news.get("other");
   
     thisNewsMedia = newsmedia; 
-    console.log(newsmedia);
-
-//save user record into Parse
-    var Record = Parse.Object.extend("surfingRecord");
-    var record = new Record();
-    record.set("userObjectId",userIdForParse);
-    record.set("newsObjectId",takeid);
-    record.set("newsTitle",newstitle);
-
-     
+    console.log(newsmedia);     
       
       //recommendation news //havent't replace the link
       
@@ -114,6 +105,13 @@ var thisNewsMedia = "";
              //console.log(putsrenewtitle);
              $("#test").append (putsrenewtitle);
        };       
+
+    //save user record into Parse
+    var Record = Parse.Object.extend("surfingRecord");
+    var record = new Record();
+    record.set("userObjectId",userIdForParse);
+    record.set("newsObjectId",takeid);
+    record.set("newsTitle",newstitle);
     },
     error: function(error){
          
