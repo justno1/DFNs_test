@@ -53,12 +53,12 @@ var thisNewsMedia = "";
     record.save(null, {
       success: function(record) {
         // Execute any logic that should take place after the object is saved.
-        alert("Parse saving success");
+  //      alert("Parse saving success");
       },
       error: function(record, error) {
         // Execute any logic that should take place if the save fails.
         // error is a Parse.Error with an error code and description.
-        alert("Parse saving failed");
+  //      alert("Parse saving failed");
       }
     });
          
