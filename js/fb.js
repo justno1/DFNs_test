@@ -76,11 +76,12 @@ FB.getLoginStatus(function(response) {
 });
 
 $("#logout").click(function () {
-    document.getElementById("login").style.display="block";
-    document.getElementById("logout").style.display="none";
+
     FB.logout();
 //    window.location.reload();
-//    window.location.href = "index.html"
+    window.location.href = "index.html"
+    document.getElementById("login").style.display="block";
+    document.getElementById("logout").style.display="none";
 });
 
 
