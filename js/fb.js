@@ -21,8 +21,8 @@ FB.getLoginStatus(function(response) {
     //    });
         FB.api('/me', {fields: 'last_name'}, function(response) {
             console.log(response);
-            window.userIdforParse = response.id;
-            alert(response.id);
+            window.id = response.id;
+            alert(window.id);
         });
 
         document.getElementById("login").style.display="none";
