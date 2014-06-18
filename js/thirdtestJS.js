@@ -1,14 +1,6 @@
 Parse.initialize("LXu553qsB1idva0RxKbksnYdbwn54XQE1JxPX4rJ", "6Bh7L4V3kTKPoINzY72A1AYcMWdT1jnJuhHtnPGD");
   
-var userIdForParse = "";
-
-$( document ).ready(function() {
-  
-      FB.api('/me', function (response) {
-        userIdForParse = response.id;
-      });
-
-});
+var userIdForParse = window.userIdForParse;
 
 var strurl = location.search;
 var ParaVal;
