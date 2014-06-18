@@ -1,12 +1,6 @@
 Parse.initialize("LXu553qsB1idva0RxKbksnYdbwn54XQE1JxPX4rJ", "6Bh7L4V3kTKPoINzY72A1AYcMWdT1jnJuhHtnPGD");
 
-var userIdForParse = "";
 
-FB.api('/me', function (response) {
-      //console.log(response);
-    userIdForParse = response.id;
-
- });
 
 
 
