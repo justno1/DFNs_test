@@ -3,7 +3,7 @@ Parse.initialize("LXu553qsB1idva0RxKbksnYdbwn54XQE1JxPX4rJ", "6Bh7L4V3kTKPoINzY7
 $(window).bind("load",function(){
     var userFBIdForParse = window.id;
       alert(window.id);
-
+});
 
 var strurl = location.search;
 var ParaVal;
@@ -285,4 +285,4 @@ var queryqueryquery = new Parse.Query(DataThree);
 
     }
   });
-});
+
