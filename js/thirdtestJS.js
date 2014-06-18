@@ -50,17 +50,6 @@ var thisNewsMedia = "";
     record.set("newsObjectId",takeid);
     record.set("newsTitle",newstitle);
 
-    record.save(null, {
-      success: function(record) {
-        // Execute any logic that should take place after the object is saved.
-        alert("Parse saving success");
-      },
-      error: function(record, error) {
-        // Execute any logic that should take place if the save fails.
-        // error is a Parse.Error with an error code and description.
-        alert("Parse saving fail");
-      }
-    });
          
       
       //recommendation news //havent't replace the link
