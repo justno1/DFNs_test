@@ -43,12 +43,6 @@ var thisNewsMedia = "";
     thisNewsMedia = newsmedia; 
     console.log(newsmedia);
 
-    //save user record into Parse
-    var Record = Parse.Object.extend("surfingRecord");
-    var record = new Record();
-    record.set("userObjectId",userIdForParse);
-    record.set("newsObjectId",takeid);
-    record.set("newsTitle",newstitle);
 
          
       
