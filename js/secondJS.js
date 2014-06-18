@@ -11,7 +11,7 @@
 
       },
 
-     /* paging(?) ＋ print the title & text & image */
+     /* print the title & text & image */
       classificationFunc:function(clickID){
         var News = Parse.Object.extend("Data");
         var query = new Parse.Query(News);
@@ -21,7 +21,8 @@
         document.getElementById('putNewsHere').innerHTML = "";
         
         if(clickID === null){query.equalTo();}
-        var clickWhatID = clickID;  
+        var clickWhatID = clickID;
+        holdClickId = clickID;  
         if(clickWhatID==="worthyReading"){query.equalTo(); query.descending("like");}
         else if(clickWhatID==="editorial"){query.greaterThan("editorial", 0);}
         else if(clickWhatID==="officialSound"){query.greaterThan("official", 0);}
@@ -57,7 +58,9 @@
           error:function(object,error){
           }
         });
+
       }
+
    	};
 
     handler.classificationFunc();
@@ -70,11 +73,6 @@
     $('#officialSound').on('click',function(){handler.classificationFunc('officialSound');});
     $('#peopleSound').on('click',function(){handler.classificationFunc('peopleSound');});
     $('#otherSound').on('click',function(){handler.classificationFunc('otherSound');});  
-
-    $('#pageBtn1').on('click',function(){});
-    $('#pageBtn2').on('click',function(){});
-    $('#pageBtn3').on('click',function(){});
-
 
 })();
 

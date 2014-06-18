@@ -7,7 +7,9 @@
  */
 
 (function (global) {
-
+    
+    Parse.initialize("LXu553qsB1idva0RxKbksnYdbwn54XQE1JxPX4rJ", "6Bh7L4V3kTKPoINzY72A1AYcMWdT1jnJuhHtnPGD");
+    
 	'use strict';
 
 	// Storage variable
@@ -151,5 +153,39 @@
 
 	// Export CSSModal into global space
 	global.CSSModal = modal;
+    
+    
+    // submit
 
+    
+    var Feedback = Parse.Object.extend("feedback");
+    //var query = new Parse.Query(Feedback);
+    var userFeedBack = new Feedback();
+       document.getElementById('submit').addEventListener('click', function(){
+          
+        var userURL = document.getElementById('input_news').value ;
+        var usercomment = document.getElementById('input_text').value ;
+        //console.log(usercomment);
+           
+        userFeedBack.save({
+          recom_url: userURL,
+          say_something: usercomment,
+          }, {
+          success: function(gameScore) {
+             alert(" 我們收到你的建議了 ");
+             window.location='#!';  
+             //window.close();  
+          },
+          error: function(gameScore, error) {
+          // The save failed.
+          // error is a Parse.Error with an error code and description.
+          }
+       }); 
+            
+            
+            
+        //window.location.reload();
+        });
+    
+    
 }(window));
