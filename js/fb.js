@@ -22,7 +22,7 @@ FB.getLoginStatus(function(response) {
         FB.api('/me', {fields: 'last_name'}, function(response) {
             console.log(response);
         });
-        document.getElementById("login").style.display="none";
+        document.getElementById("getLoginStatus").style.display="none";
         document.getElementById("logout").style.display="block";
         
     
@@ -70,6 +70,12 @@ FB.getLoginStatus(function(response) {
     }, {scope: "user_likes,user_photos,publish_actions"});    
   }
  });
+});
+
+$("#logout").click(function () {
+    FB.logout(function(response) {
+      // user is now logged out
+    });
 });
 
 
