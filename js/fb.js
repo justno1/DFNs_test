@@ -42,6 +42,9 @@ FB.getLoginStatus(function(response) {
  });
 };
 
+
+
+
 $("#login").click(function () {
    FB.login(function(response) {
                 // FB.api('/me/feed', 'post', {message: 'I\'m started using FB API'});
@@ -73,6 +76,7 @@ FB.getLoginStatus(function(response) {
 });
 
 $("#logout").click(function () {
+  alert("In Logout");
     FB.logout(function(response) {
       // user is now logged out
     });
