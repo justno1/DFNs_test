@@ -22,9 +22,10 @@ FB.getLoginStatus(function(response) {
         FB.api('/me', {fields: 'last_name'}, function(response) {
             console.log(response);
             window.userIdforParse = response.id;
+            alert(window.userIdforParse);
+
         });
 
-        alert(window.userIdforParse);
         document.getElementById("login").style.display="none";
         document.getElementById("logout").style.display="block";
         
