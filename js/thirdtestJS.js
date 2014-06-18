@@ -1,17 +1,17 @@
 Parse.initialize("LXu553qsB1idva0RxKbksnYdbwn54XQE1JxPX4rJ", "6Bh7L4V3kTKPoINzY72A1AYcMWdT1jnJuhHtnPGD");
 
-var userIdForParse = "";
-
-
-window.fbAsyncInit = function () {
-FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    FB.api('/me', function (response) {
-      userIdForParse = response.id;
-      });     
-  }
+$( document ).ready(function() {
+  FB.getLoginStatus(function(response) {
+    if (response.status === 'connected') {
+      FB.api('/me', function (response) {
+        userIdForParse = response.id;
+        });     
+    }
   };
-};
+});
+
+
+var userIdForParse = "";
 
 var strurl = location.search;
 var ParaVal;
