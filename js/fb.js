@@ -77,9 +77,7 @@ FB.getLoginStatus(function(response) {
 
 $("#logout").click(function () {
   alert("In Logout");
-    FB.logout(function(response) {
-      // user is now logged out
-    });
+    FB.logout();
 });
 
 
