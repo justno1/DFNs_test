@@ -1,6 +1,6 @@
 Parse.initialize("LXu553qsB1idva0RxKbksnYdbwn54XQE1JxPX4rJ", "6Bh7L4V3kTKPoINzY72A1AYcMWdT1jnJuhHtnPGD");
   
-var userIdForParse = window.userIdForParse;
+var userFBIdForParse = window.userIdForParse;
 
 var strurl = location.search;
 var ParaVal;
@@ -35,7 +35,7 @@ var thisNewsMedia = "";
     //save user record into Parse
     var Record = Parse.Object.extend("surfingRecord");
     var record = new Record();
-    record.set("userObjectId",userIdForParse);
+    record.set("userObjectId",userFBIdForParse);
     record.set("newsObjectId",takeid);
     record.set("newsTitle",newstitle);
 
