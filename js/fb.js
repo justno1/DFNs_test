@@ -23,6 +23,7 @@ FB.getLoginStatus(function(response) {
             console.log(response);
             window.id = response.id;
         });
+        alert(window.id);
 
         document.getElementById("login").style.display="none";
         document.getElementById("logout").style.display="block";
