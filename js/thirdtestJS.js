@@ -35,7 +35,7 @@ var thisNewsMedia = "";
     //save user record into Parse
     var Record = Parse.Object.extend("surfingRecord");
     var record = new Record();
-    record.set("userObjectId",userFB  IdForParse);
+    record.set("userObjectId",userFBIdForParse);
     record.set("newsObjectId",takeid);
     record.set("newsTitle",newstitle);
 
