@@ -13,12 +13,7 @@ FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     //呼叫api把圖片放到#preview IMG tag 內
     console.log("user is logged in and has authenticated your app");
-    //var uid = response.authResponse.userID;
-    //var accessToken = response.authResponse.accessToken;
-    //window.authToken=response.authResponse.accessToken;    
-    //    FB.api('/me/likes', function (response) {
-    //        console.log(response),
-    //    });
+
         FB.api('/me', {fields: 'last_name'}, function(response) {
             console.log(response);
             window.id = response.id;
